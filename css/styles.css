@@ -1,0 +1,12 @@
+#game {
+  
+}
+
+#winner {
+  display: none;
+  height: 500px;
+  width: 500px;
+  padding: 200px 0;
+  margin: 3% auto;
+  background-color: pink;
+}
