@@ -1,10 +1,23 @@
 //business logic
 
-// function User(userName, userScore) {
-//   this.userName = userName;
-//   this.userScore = userScore;
-// }
+function User(userName, userScore) {
+  this.userName = userName;
+  this.userScore = userScore;
+}
 
+//need to write method to switch players (using an array and when it finishes start at beginning)
+User.prototype.switchPlayer = function() {
+  for (index = 0; index < users.length; index +=1) {
+
+  }
+}
+
+//also need method to save and display players roll total and total score
+User.prototype.keepScore = function() {
+
+}
+
+//tie active user into the rollDice() method (make it a prototype beacuse it will be applied to the current user)
 function rollDice(turnTotal) {
   //to start each roll, it IS the players turn
   var turn = true;
@@ -30,8 +43,14 @@ $(document).ready(function() {
   //we don't want turnTotal or userScore to start at 0
   var turnTotal = 0;
   var userScore = 0;
-  //var user = new User(userName, userScore);
+  var users = [];
+  var user1 = new User("Player 1", 0);
+  var user2 = new User("Player 2", 0);
+  users.push(user1, user2);
 
+  console.log(users);
+
+  //when "roll" button is clicked
   $("button#roll-button").click(function() {
 
     turnTotal = rollDice(turnTotal);
@@ -42,14 +61,18 @@ $(document).ready(function() {
 
   });
 
+  //when "hold" button is clicked:
   $("button#hold-button").click(function() {
-    //userScore adds the turnTotal to the previously stored sum and zeros it out and the turn becomes false
+    //userScore adds turnTotal to the stored sum of userScore and zeros out turnTotal
+    //and the turn becomes false
     userScore += turnTotal;
     turnTotal = 0;
     turn = false;
 
     console.log(userScore);
     console.log(turn);
+    console.log(user1);
+    console.log(user2);
 
     $("div#total-score h2 span").text(userScore);
 
