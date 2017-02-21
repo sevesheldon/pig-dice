@@ -4,20 +4,10 @@ function User(userName, userScore) {
   this.userName = userName;
   this.userScore = userScore;
 }
-
 //need to write method to switch players (using an array and when it finishes start at beginning)
-User.prototype.switchPlayer = function() {
-  for (index = 0; index < users.length; index +=1) {
-
-  }
-}
-
 //also need method to save and display players roll total and total score
-User.prototype.keepScore = function() {
-
-}
-
 //tie active user into the rollDice() method (make it a prototype beacuse it will be applied to the current user)
+
 function rollDice(turnTotal) {
   //to start each roll, it IS the players turn
   var turn = true;
@@ -30,7 +20,6 @@ function rollDice(turnTotal) {
     turnTotal = 0;
     turn = false;
   }
-
   console.log(turn);
   console.log(dieNumber);
   $("div#die-number h2 span").text(dieNumber);
