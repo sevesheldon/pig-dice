@@ -10,23 +10,53 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div id="game" class="container">
-      <div id="die-number">
-        <h2>Die Number: <span>0</span></h2>
-      </div>
-      <div id="roll-number">
-        <h2>Roll Score: <span>0</span></h2>
-      </div>
-
-      <button type="submit" id="roll-button" class="btn">Roll!</button>
-      <button type="submit" id="hold-button" class="btn">Hold!</button>
-
-      <div id="players">
-        <div id="player1" class="current-player">
-          <h2>Player 1: <span>0</span></h2>
+    <div class="container">
+      <div id="header" class="row">
+        <div class="col-sm-6">
+          <div id="start-game">
+          <button class="btn btn-info">Start Game!</button>
+          </div>
         </div>
-        <div id="player2">
-          <h2>Player 2: <span>0</span></h2>
+        <div class="col-sm-6">
+          <div id="instructions">
+            <button class="btn btn-success">Instructions</button>
+          </div>
+        </div>
+      </div>
+      <div id="instructions-list" class="row">
+        <ol>
+          <li>If the player rolls a 1, they score nothing and it becomes the next player's turn</li>
+          <br>
+          <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+          <br>
+          <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+          <br>
+          <li>First player to collect 100 points wins the game.</li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1 id="game-title">Pig Dice</h1>
+        </div>
+      </div>
+      <div id="game"  class="row">
+        <div id="die-number">
+          <h2>Die Number: <span>0</span></h2>
+        </div>
+        <div id="roll-number">
+          <h2>Roll Score: <span>0</span></h2>
+        </div>
+
+        <button type="submit" id="roll-button" class="btn">Roll!</button>
+        <button type="submit" id="hold-button" class="btn">Hold!</button>
+
+        <div id="players">
+          <div id="player1" class="current-player">
+            <h2>Player 1: <span>0</span></h2>
+          </div>
+          <div id="player2">
+            <h2>Player 2: <span>0</span></h2>
+          </div>
         </div>
       </div>
     </div>
@@ -34,6 +64,7 @@
     <div id="winner" class="text-center">
       <h1 id="winner-name"><span></span></h1>
       <h1>You're the freaking WINNER!</h1>
+      <button id="restart" class="btn btn-info">Play Again!</button>
     </div>
   </body>
 </html>

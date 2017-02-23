@@ -43,6 +43,14 @@ function rollDice(turnTotal, activeUser, users) {
 
 //user logic
 $(document).ready(function() {
+  $("#start-game button").click(function() {
+    $("div#game").fadeIn();
+    $("#start-game button").fadeOut();
+  });
+
+  $("#instructions button").click(function() {
+    $("div#instructions-list").fadeToggle();
+  });
   //keeping variable scope in mind, everytime we click "roll" or "hold"
   //we don't want turnTotal or userScore to start at 0
   var turnTotal = 0;
@@ -73,6 +81,9 @@ $(document).ready(function() {
       $("div#game").fadeOut();
       $("div#winner").fadeIn();
       $("div#winner h1#winner-name").text(users[activeUser].userName); //displays userName of user[activeUser]
+      $("button#restart").click(function() {
+        location.reload();
+      });
     }
 
     turnTotal = 0; //zeros out turnTotal

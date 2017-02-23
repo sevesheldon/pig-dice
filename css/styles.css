@@ -10,3 +10,28 @@
   margin: 3% auto;
   background-color: pink;
 }
+
+#instructions button {
+  float: right;
+}
+
+div#header {
+  padding: 20px 0;
+  background-color: pink;
+}
+
+div#instructions-list {
+  display: none;
+  min-height: 200px;
+  background-color: pink;
+  z-index: 2;
+}
+
+h1#game-title {
+  font-size: 60px;
+}
+
+div#game {
+  display: none;
+  z-index: 1;
+}
