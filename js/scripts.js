@@ -14,7 +14,7 @@ function changePlayer(x, y) {
 }
 
 function highlightPlayer(players, activeUser) { //or is it (players[activeUser]) ???
-  var players = $("div#players").children(); //all the children of the div #players
+  var players = $("div.players").children(); //all the children of the div #players
   players.each(function() {
     $(this).removeClass("current-player"); //for each child of .this element, remove the class .current-player
   });
@@ -45,7 +45,7 @@ function rollDice(turnTotal, activeUser, users) {
 $(document).ready(function() {
   $("#start-game button").click(function() {
     $("div#game").fadeIn();
-    $("#start-game button").fadeOut();
+    $("div#start-game button").fadeOut();
   });
 
   $("#instructions button").click(function() {
@@ -81,7 +81,7 @@ $(document).ready(function() {
       $("div#game").fadeOut();
       $("div#winner").fadeIn();
       $("div#winner h1#winner-name").text(users[activeUser].userName); //displays userName of user[activeUser]
-      $("button#restart").click(function() {
+      $("button#replay").click(function() {
         location.reload();
       });
     }

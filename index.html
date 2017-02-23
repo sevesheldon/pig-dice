@@ -25,6 +25,8 @@
       </div>
       <div id="instructions-list" class="row">
         <ol>
+          <h2>4 simple rules:</h2>
+          <br>
           <li>If the player rolls a 1, they score nothing and it becomes the next player's turn</li>
           <br>
           <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
@@ -39,32 +41,41 @@
           <h1 id="game-title">Pig Dice</h1>
         </div>
       </div>
-      <div id="game"  class="row">
-        <div id="die-number">
-          <h2>Die Number: <span>0</span></h2>
-        </div>
-        <div id="roll-number">
-          <h2>Roll Score: <span>0</span></h2>
-        </div>
-
-        <button type="submit" id="roll-button" class="btn">Roll!</button>
-        <button type="submit" id="hold-button" class="btn">Hold!</button>
-
-        <div id="players">
-          <div id="player1" class="current-player">
-            <h2>Player 1: <span>0</span></h2>
+      <div id="game">
+        <div id="player-score-row" class="row text-center">
+          <div id="players" class="col-sm-6 players">
+            <div id="player1" class="current-player">
+              <h2>Player 1<br> <span class="player-score" id="player1-score">0</span></h2>
+            </div>
           </div>
-          <div id="player2">
-            <h2>Player 2: <span>0</span></h2>
+          <div class="col-sm-6 players">
+            <div id="player2">
+              <h2>Player 2<br> <span class="player-score" id="player2-score">0</span></h2>
+            </div>
+          </div>
+        </div>
+        <div id="die-roll-row" class="row text-center">
+          <div class="col-sm-4">
+            <button type="submit" id="roll-button" class="btn btn-info">Roll!</button>
+          </div>
+          <div class="col-sm-4">
+            <div id="die-number">
+              <h2>Die Number: <span>0</span></h2>
+            </div>
+            <div id="roll-number">
+              <h2>Roll Score: <span>0</span></h2>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" id="hold-button" class="btn btn-danger">Hold!</button>
           </div>
         </div>
       </div>
-    </div>
 
     <div id="winner" class="text-center">
       <h1 id="winner-name"><span></span></h1>
       <h1>You're the freaking WINNER!</h1>
-      <button id="restart" class="btn btn-info">Play Again!</button>
+      <button id="replay" class="btn btn-info">Play Again!</button>
     </div>
   </body>
 </html>

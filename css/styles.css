@@ -1,22 +1,10 @@
-.current-player {
-  background: aliceblue;
-}
-
-#winner {
-  display: none;
-  height: 500px;
-  width: 500px;
-  padding: 200px 0;
-  margin: 3% auto;
-  background-color: pink;
-}
 
 #instructions button {
   float: right;
 }
 
 div#header {
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: pink;
 }
 
@@ -34,4 +22,38 @@ h1#game-title {
 div#game {
   display: none;
   z-index: 1;
+}
+
+#player-score-row {
+  margin: 10px 0;
+}
+
+.current-player {
+  background: #5bc0de;
+  border-radius: 80px;
+  padding: 20px 0;
+}
+
+span.player-score {
+  font-size: 60px;
+}
+
+#die-roll-row {
+  margin: 30px 0;
+  padding: 30px 0;
+  background-color: pink;
+}
+
+.btn {
+    width: 200px;
+    padding: 15px;
+}
+
+#winner {
+  display: none;
+  height: 500px;
+  width: 500px;
+  padding: 200px 0;
+  margin: 3% auto;
+  background-color: pink;
 }
